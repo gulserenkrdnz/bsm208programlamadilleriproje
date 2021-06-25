@@ -1,5 +1,6 @@
 ﻿using Business.Abstract;
 using DataAccess.Abstract;
+using Entities.Concreate;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,6 +15,10 @@ namespace Business.Concreate
         {
             _agencyDal = agencyDal;
         }
-        //kfglk
+
+        public Agency LoginCheck(string username, string password)
+        {
+            return _agencyDal.Get(a => a.UserName == username && a.Pass == password);
+        }
     }
 }

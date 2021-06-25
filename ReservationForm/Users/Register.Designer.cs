@@ -54,12 +54,12 @@ namespace ReservationForm.Users
             this.Register_PassCheck = new System.Windows.Forms.TextBox();
             this.Register_Password = new System.Windows.Forms.TextBox();
             this.Register_Email = new System.Windows.Forms.TextBox();
-            this.Register_BirthDate = new System.Windows.Forms.MaskedTextBox();
-            this.Register_Phone = new System.Windows.Forms.MaskedTextBox();
             this.Register_TC = new System.Windows.Forms.MaskedTextBox();
             this.Register_LastName = new System.Windows.Forms.TextBox();
             this.Register_Name = new System.Windows.Forms.TextBox();
             this.Register_RegisterButton = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -284,23 +284,6 @@ namespace ReservationForm.Users
             this.Register_Email.Size = new System.Drawing.Size(183, 25);
             this.Register_Email.TabIndex = 59;
             // 
-            // Register_BirthDate
-            // 
-            this.Register_BirthDate.Location = new System.Drawing.Point(131, 209);
-            this.Register_BirthDate.Mask = "00/00/0000";
-            this.Register_BirthDate.Name = "Register_BirthDate";
-            this.Register_BirthDate.Size = new System.Drawing.Size(182, 25);
-            this.Register_BirthDate.TabIndex = 58;
-            this.Register_BirthDate.ValidatingType = typeof(System.DateTime);
-            // 
-            // Register_Phone
-            // 
-            this.Register_Phone.Location = new System.Drawing.Point(131, 250);
-            this.Register_Phone.Mask = "(999) 000-0000";
-            this.Register_Phone.Name = "Register_Phone";
-            this.Register_Phone.Size = new System.Drawing.Size(182, 25);
-            this.Register_Phone.TabIndex = 57;
-            // 
             // Register_TC
             // 
             this.Register_TC.Location = new System.Drawing.Point(131, 164);
@@ -334,6 +317,20 @@ namespace ReservationForm.Users
             this.Register_RegisterButton.UseVisualStyleBackColor = true;
             this.Register_RegisterButton.Click += new System.EventHandler(this.Register_RegisterButton_Click_1);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(131, 211);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(182, 25);
+            this.dateTimePicker1.TabIndex = 70;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(130, 250);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(183, 25);
+            this.textBox1.TabIndex = 71;
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -342,6 +339,8 @@ namespace ReservationForm.Users
             this.BackgroundImage = global::ReservationForm.Properties.Resources.ucak_seyahat_yolcu;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(606, 544);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label11);
@@ -353,8 +352,6 @@ namespace ReservationForm.Users
             this.Controls.Add(this.Register_PassCheck);
             this.Controls.Add(this.Register_Password);
             this.Controls.Add(this.Register_Email);
-            this.Controls.Add(this.Register_BirthDate);
-            this.Controls.Add(this.Register_Phone);
             this.Controls.Add(this.Register_TC);
             this.Controls.Add(this.Register_LastName);
             this.Controls.Add(this.Register_Name);
@@ -397,11 +394,11 @@ namespace ReservationForm.Users
         private System.Windows.Forms.TextBox Register_PassCheck;
         private System.Windows.Forms.TextBox Register_Password;
         private System.Windows.Forms.TextBox Register_Email;
-        private System.Windows.Forms.MaskedTextBox Register_BirthDate;
-        private System.Windows.Forms.MaskedTextBox Register_Phone;
         private System.Windows.Forms.MaskedTextBox Register_TC;
         private System.Windows.Forms.TextBox Register_LastName;
         private System.Windows.Forms.TextBox Register_Name;
         private System.Windows.Forms.Button Register_RegisterButton;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -13,6 +13,7 @@ namespace Business.Abstract
         void Update(User user);
         User GetById(int id);
         User GetByemail(string email);
+        User LoginCheck(string email, string password);
 
     }
 }
