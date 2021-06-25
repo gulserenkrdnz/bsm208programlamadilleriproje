@@ -7,3 +7,12 @@ C:\Users\Clementine\source\repos\UcakBiletRezervasyonu2\Core\obj\Debug\netcoreap
 C:\Users\Clementine\source\repos\UcakBiletRezervasyonu2\Core\obj\Debug\netcoreapp3.1\Core.csproj.CoreCompileInputs.cache
 C:\Users\Clementine\source\repos\UcakBiletRezervasyonu2\Core\obj\Debug\netcoreapp3.1\Core.dll
 C:\Users\Clementine\source\repos\UcakBiletRezervasyonu2\Core\obj\Debug\netcoreapp3.1\Core.pdb
+C:\Users\Clementine\Source\Repos\bsm208programlamadilleriproje\Core\bin\Debug\netcoreapp3.1\Core.deps.json
+C:\Users\Clementine\Source\Repos\bsm208programlamadilleriproje\Core\bin\Debug\netcoreapp3.1\Core.dll
+C:\Users\Clementine\Source\Repos\bsm208programlamadilleriproje\Core\bin\Debug\netcoreapp3.1\Core.pdb
+C:\Users\Clementine\Source\Repos\bsm208programlamadilleriproje\Core\obj\Debug\netcoreapp3.1\Core.csprojAssemblyReference.cache
+C:\Users\Clementine\Source\Repos\bsm208programlamadilleriproje\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfoInputs.cache
+C:\Users\Clementine\Source\Repos\bsm208programlamadilleriproje\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfo.cs
+C:\Users\Clementine\Source\Repos\bsm208programlamadilleriproje\Core\obj\Debug\netcoreapp3.1\Core.csproj.CoreCompileInputs.cache
+C:\Users\Clementine\Source\Repos\bsm208programlamadilleriproje\Core\obj\Debug\netcoreapp3.1\Core.dll
+C:\Users\Clementine\Source\Repos\bsm208programlamadilleriproje\Core\obj\Debug\netcoreapp3.1\Core.pdb

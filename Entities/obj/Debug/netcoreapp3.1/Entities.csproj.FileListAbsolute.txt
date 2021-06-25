@@ -1,0 +1,12 @@
+C:\Users\Clementine\Source\Repos\bsm208programlamadilleriproje\Entities\bin\Debug\netcoreapp3.1\Entities.deps.json
+C:\Users\Clementine\Source\Repos\bsm208programlamadilleriproje\Entities\bin\Debug\netcoreapp3.1\Entities.dll
+C:\Users\Clementine\Source\Repos\bsm208programlamadilleriproje\Entities\bin\Debug\netcoreapp3.1\Entities.pdb
+C:\Users\Clementine\Source\Repos\bsm208programlamadilleriproje\Entities\bin\Debug\netcoreapp3.1\Core.dll
+C:\Users\Clementine\Source\Repos\bsm208programlamadilleriproje\Entities\bin\Debug\netcoreapp3.1\Core.pdb
+C:\Users\Clementine\Source\Repos\bsm208programlamadilleriproje\Entities\obj\Debug\netcoreapp3.1\Entities.csprojAssemblyReference.cache
+C:\Users\Clementine\Source\Repos\bsm208programlamadilleriproje\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfoInputs.cache
+C:\Users\Clementine\Source\Repos\bsm208programlamadilleriproje\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfo.cs
+C:\Users\Clementine\Source\Repos\bsm208programlamadilleriproje\Entities\obj\Debug\netcoreapp3.1\Entities.csproj.CoreCompileInputs.cache
+C:\Users\Clementine\Source\Repos\bsm208programlamadilleriproje\Entities\obj\Debug\netcoreapp3.1\Entities.csproj.CopyComplete
+C:\Users\Clementine\Source\Repos\bsm208programlamadilleriproje\Entities\obj\Debug\netcoreapp3.1\Entities.dll
+C:\Users\Clementine\Source\Repos\bsm208programlamadilleriproje\Entities\obj\Debug\netcoreapp3.1\Entities.pdb

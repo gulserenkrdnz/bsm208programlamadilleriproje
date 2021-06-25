@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Clementine\\source\\repos\\UcakBiletRezervasyonu2\\Core\\Core.csproj": {}
+    "C:\\Users\\Clementine\\Source\\Repos\\bsm208programlamadilleriproje\\Core\\Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Clementine\\source\\repos\\UcakBiletRezervasyonu2\\Core\\Core.csproj": {
+    "C:\\Users\\Clementine\\Source\\Repos\\bsm208programlamadilleriproje\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Clementine\\source\\repos\\UcakBiletRezervasyonu2\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\Clementine\\Source\\Repos\\bsm208programlamadilleriproje\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Users\\Clementine\\source\\repos\\UcakBiletRezervasyonu2\\Core\\Core.csproj",
+        "projectPath": "C:\\Users\\Clementine\\Source\\Repos\\bsm208programlamadilleriproje\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\Clementine\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Clementine\\source\\repos\\UcakBiletRezervasyonu2\\Core\\obj\\",
+        "outputPath": "C:\\Users\\Clementine\\Source\\Repos\\bsm208programlamadilleriproje\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

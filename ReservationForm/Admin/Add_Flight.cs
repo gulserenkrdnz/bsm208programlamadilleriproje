@@ -19,5 +19,13 @@ namespace ReservationForm.Admin
         {
 
         }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            AdminPage adminPage = new AdminPage();
+            this.Visible = false;
+            adminPage.ShowDialog();
+            this.Close();
+        }
     }
 }
