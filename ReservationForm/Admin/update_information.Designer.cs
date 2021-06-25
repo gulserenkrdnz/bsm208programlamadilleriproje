@@ -42,29 +42,29 @@ namespace ReservationForm.Admin
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(55, 76);
+            this.label10.Location = new System.Drawing.Point(86, 76);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 17);
+            this.label10.Size = new System.Drawing.Size(74, 17);
             this.label10.TabIndex = 20;
-            this.label10.Text = "E-Mail :";
+            this.label10.Text = "Username :";
             // 
             // Register_PassCheck
             // 
-            this.Register_PassCheck.Location = new System.Drawing.Point(114, 160);
+            this.Register_PassCheck.Location = new System.Drawing.Point(167, 160);
             this.Register_PassCheck.Name = "Register_PassCheck";
             this.Register_PassCheck.Size = new System.Drawing.Size(183, 25);
             this.Register_PassCheck.TabIndex = 18;
             // 
             // Register_Password
             // 
-            this.Register_Password.Location = new System.Drawing.Point(113, 117);
+            this.Register_Password.Location = new System.Drawing.Point(166, 117);
             this.Register_Password.Name = "Register_Password";
             this.Register_Password.Size = new System.Drawing.Size(183, 25);
             this.Register_Password.TabIndex = 17;
             // 
             // Register_Email
             // 
-            this.Register_Email.Location = new System.Drawing.Point(113, 74);
+            this.Register_Email.Location = new System.Drawing.Point(166, 74);
             this.Register_Email.Name = "Register_Email";
             this.Register_Email.Size = new System.Drawing.Size(183, 25);
             this.Register_Email.TabIndex = 16;
@@ -72,7 +72,7 @@ namespace ReservationForm.Admin
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(36, 163);
+            this.label12.Location = new System.Drawing.Point(79, 163);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(81, 17);
             this.label12.TabIndex = 21;
@@ -80,7 +80,7 @@ namespace ReservationForm.Admin
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(133, 226);
+            this.button1.Location = new System.Drawing.Point(166, 237);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(131, 41);
             this.button1.TabIndex = 22;
@@ -96,11 +96,12 @@ namespace ReservationForm.Admin
             this.button2.TabIndex = 23;
             this.button2.Text = "Geri";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(66, 126);
+            this.label11.Location = new System.Drawing.Point(119, 126);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(41, 17);
             this.label11.TabIndex = 24;
@@ -120,6 +121,7 @@ namespace ReservationForm.Admin
             this.Controls.Add(this.Register_Password);
             this.Controls.Add(this.Register_Email);
             this.Name = "update_information";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "update_information";
             this.Load += new System.EventHandler(this.update_information_Load);
             this.ResumeLayout(false);

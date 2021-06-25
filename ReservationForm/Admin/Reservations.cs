@@ -8,24 +8,19 @@ using System.Windows.Forms;
 
 namespace ReservationForm.Admin
 {
-    public partial class AdminLogin : Form
+    public partial class Reservations : Form
     {
-        public AdminLogin()
+        public Reservations()
         {
             InitializeComponent();
         }
 
-        private void Admin_LoginButton_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             AdminPage adminPage = new AdminPage();
             this.Visible = false;
             adminPage.ShowDialog();
             this.Close();
-        }
-
-        private void AdminLogin_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

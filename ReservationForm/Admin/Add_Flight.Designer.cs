@@ -62,6 +62,7 @@ namespace ReservationForm.Admin
             this.Controls.Add(this.back);
             this.Controls.Add(this.addflight);
             this.Name = "Add_Flight";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_Flight";
             this.Load += new System.EventHandler(this.Add_Flight_Load);
             this.ResumeLayout(false);
