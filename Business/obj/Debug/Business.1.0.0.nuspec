@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Business</id>
+    <version>1.0.0</version>
+    <authors>Business</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Clementine\source\repos\UcakBiletRezervasyonu2\Business\bin\Debug\netcoreapp3.1\Business.dll" target="lib\netcoreapp3.1\Business.dll" />
+  </files>
+</package>
