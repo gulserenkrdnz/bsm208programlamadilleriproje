@@ -41,6 +41,11 @@ namespace Business.Concreate
             return _userDal.Get(u => u.ID == id);
         }
 
+        public User LoginCheck(string email, string password)
+        {
+            return _userDal.Get(u => u.Email == email && u.Pass == password);
+        }
+
         public void Update(User user)
         {
             _userDal.Update(user);

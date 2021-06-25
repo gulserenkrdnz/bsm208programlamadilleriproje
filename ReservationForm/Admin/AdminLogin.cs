@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Business.Concreate;
+using DataAccess.Concreate.EntityFramework;
+using Entities.Concreate;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,10 +20,24 @@ namespace ReservationForm.Admin
 
         private void Admin_LoginButton_Click(object sender, EventArgs e)
         {
-            AdminPage adminPage = new AdminPage();
-            this.Visible = false;
-            adminPage.ShowDialog();
-            this.Close();
+
+            AgencyManager agencyManager = new AgencyManager(new EfAgencyDal());
+            Agency agency = new Agency();
+
+            agency = agencyManager.LoginCheck(Admin_UserName.Text.Trim(), Admin_Password.Text.Trim());
+
+            if (agency is null)
+            {
+                //Hatalı giriş uyarısı verilecek
+            }
+            else
+            {
+                AdminPage adminPage = new AdminPage();
+                this.Visible = false;
+                adminPage.ShowDialog();
+                this.Close();
+            }
+            
         }
 
         private void AdminLogin_Load(object sender, EventArgs e)

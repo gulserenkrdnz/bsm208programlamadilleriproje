@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Business.Concreate;
+using DataAccess.Concreate.EntityFramework;
+using Entities.Concreate;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -53,7 +56,27 @@ namespace ReservationForm.Users
 
         private void Register_RegisterButton_Click_1(object sender, EventArgs e)
         {
+            UserManager userManager = new UserManager(new EfUserDal());
+            User user = new User {
+                FirstName = Register_Name.Text.Trim(),
+                LastName = Register_LastName.Text.Trim(),
+                BirthDate = dateTimePicker1.Value,
+                PhoneNumber = textBox1.Text.Trim(),
+                TC = Register_TC.Text.Trim(),
+                Email = Register_Email.Text.Trim(),
+                Pass = Register_Password.Text.Trim()
+            };
 
+            if (Register_Password.Text.Trim() == Register_PassCheck.Text.Trim()
+                && userManager.GetByemail(Register_Email.Text.Trim()) == null)
+            {
+                userManager.Add(user);
+                //Kayıt tamamlandı bildirimi verilecek
+            }
+            else
+            {
+                //Kayıt tamamlanamadı bildirimi verilecek
+            }
         }
     }
 }

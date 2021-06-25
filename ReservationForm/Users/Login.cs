@@ -5,6 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using Business.Concreate;
+using DataAccess.Concreate.EntityFramework;
+using Entities.Concreate;
 using ReservationForm;
 using ReservationForm.Admin;
 
@@ -19,10 +22,22 @@ namespace ReservationForm.Users
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Search search = new Search();
-            this.Visible = false;
-            search.ShowDialog();
-            this.Close();
+            UserManager userManager = new UserManager(new EfUserDal());
+            User user = new User();
+            
+            user = userManager.LoginCheck(UserName.Text.Trim(), Pass.Text.Trim());
+           
+            if(user is null)
+            {
+                //Hatalı giriş uyarısı verilecek
+            }
+            else
+            {
+                Search search = new Search();
+                this.Visible = false;
+                search.ShowDialog();
+                this.Close();
+            }
         }
 
         private void Login_Register_Click(object sender, EventArgs e)
@@ -39,6 +54,11 @@ namespace ReservationForm.Users
             this.Visible = false;
             adminLogin.ShowDialog();
             this.Close();
+        }
+
+        private void UserName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

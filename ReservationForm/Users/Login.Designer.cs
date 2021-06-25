@@ -34,7 +34,7 @@ namespace ReservationForm.Users
             this.Login_Login = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.isim = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Pass = new System.Windows.Forms.TextBox();
             this.UserName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -86,12 +86,12 @@ namespace ReservationForm.Users
             this.isim.TabIndex = 16;
             this.isim.Text = "E-Mail:";
             // 
-            // textBox2
+            // Pass
             // 
-            this.textBox2.Location = new System.Drawing.Point(189, 105);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(195, 25);
-            this.textBox2.TabIndex = 15;
+            this.Pass.Location = new System.Drawing.Point(189, 105);
+            this.Pass.Name = "Pass";
+            this.Pass.Size = new System.Drawing.Size(195, 25);
+            this.Pass.TabIndex = 15;
             // 
             // UserName
             // 
@@ -99,6 +99,7 @@ namespace ReservationForm.Users
             this.UserName.Name = "UserName";
             this.UserName.Size = new System.Drawing.Size(196, 25);
             this.UserName.TabIndex = 14;
+            this.UserName.TextChanged += new System.EventHandler(this.UserName_TextChanged);
             // 
             // Login
             // 
@@ -111,7 +112,7 @@ namespace ReservationForm.Users
             this.Controls.Add(this.Login_Login);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.isim);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.Pass);
             this.Controls.Add(this.UserName);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -128,7 +129,7 @@ namespace ReservationForm.Users
         private System.Windows.Forms.Button Login_Login;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label isim;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Pass;
         private System.Windows.Forms.TextBox UserName;
     }
 }
