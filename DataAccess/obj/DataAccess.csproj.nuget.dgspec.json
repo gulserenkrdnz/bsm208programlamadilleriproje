@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Clementine\\source\\repos\\UcakBiletRezervasyonu2\\DataAccess\\DataAccess.csproj": {}
+    "C:\\Users\\Clementine\\Source\\Repos\\bsm208programlamadilleriproje\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Clementine\\source\\repos\\UcakBiletRezervasyonu2\\Core\\Core.csproj": {
+    "C:\\Users\\Clementine\\Source\\Repos\\bsm208programlamadilleriproje\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Clementine\\source\\repos\\UcakBiletRezervasyonu2\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\Clementine\\Source\\Repos\\bsm208programlamadilleriproje\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Users\\Clementine\\source\\repos\\UcakBiletRezervasyonu2\\Core\\Core.csproj",
+        "projectPath": "C:\\Users\\Clementine\\Source\\Repos\\bsm208programlamadilleriproje\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\Clementine\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Clementine\\source\\repos\\UcakBiletRezervasyonu2\\Core\\obj\\",
+        "outputPath": "C:\\Users\\Clementine\\Source\\Repos\\bsm208programlamadilleriproje\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -69,14 +69,14 @@
         }
       }
     },
-    "C:\\Users\\Clementine\\source\\repos\\UcakBiletRezervasyonu2\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\Clementine\\Source\\Repos\\bsm208programlamadilleriproje\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Clementine\\source\\repos\\UcakBiletRezervasyonu2\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\Clementine\\Source\\Repos\\bsm208programlamadilleriproje\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\Clementine\\source\\repos\\UcakBiletRezervasyonu2\\DataAccess\\DataAccess.csproj",
+        "projectPath": "C:\\Users\\Clementine\\Source\\Repos\\bsm208programlamadilleriproje\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\Clementine\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Clementine\\source\\repos\\UcakBiletRezervasyonu2\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\Clementine\\Source\\Repos\\bsm208programlamadilleriproje\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -98,11 +98,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Clementine\\source\\repos\\UcakBiletRezervasyonu2\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\Clementine\\source\\repos\\UcakBiletRezervasyonu2\\Core\\Core.csproj"
+              "C:\\Users\\Clementine\\Source\\Repos\\bsm208programlamadilleriproje\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\Clementine\\Source\\Repos\\bsm208programlamadilleriproje\\Core\\Core.csproj"
               },
-              "C:\\Users\\Clementine\\source\\repos\\UcakBiletRezervasyonu2\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\Clementine\\source\\repos\\UcakBiletRezervasyonu2\\Entities\\Entities.csproj"
+              "C:\\Users\\Clementine\\Source\\Repos\\bsm208programlamadilleriproje\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Clementine\\Source\\Repos\\bsm208programlamadilleriproje\\Entities\\Entities.csproj"
               }
             }
           }
@@ -141,14 +141,14 @@
         }
       }
     },
-    "C:\\Users\\Clementine\\source\\repos\\UcakBiletRezervasyonu2\\Entities\\Entities.csproj": {
+    "C:\\Users\\Clementine\\Source\\Repos\\bsm208programlamadilleriproje\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Clementine\\source\\repos\\UcakBiletRezervasyonu2\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Clementine\\Source\\Repos\\bsm208programlamadilleriproje\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\Clementine\\source\\repos\\UcakBiletRezervasyonu2\\Entities\\Entities.csproj",
+        "projectPath": "C:\\Users\\Clementine\\Source\\Repos\\bsm208programlamadilleriproje\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\Clementine\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Clementine\\source\\repos\\UcakBiletRezervasyonu2\\Entities\\obj\\",
+        "outputPath": "C:\\Users\\Clementine\\Source\\Repos\\bsm208programlamadilleriproje\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -170,8 +170,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Clementine\\source\\repos\\UcakBiletRezervasyonu2\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\Clementine\\source\\repos\\UcakBiletRezervasyonu2\\Core\\Core.csproj"
+              "C:\\Users\\Clementine\\Source\\Repos\\bsm208programlamadilleriproje\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\Clementine\\Source\\Repos\\bsm208programlamadilleriproje\\Core\\Core.csproj"
               }
             }
           }

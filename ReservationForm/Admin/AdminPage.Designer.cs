@@ -38,9 +38,9 @@ namespace ReservationForm.Admin
             // 
             // Add_Flight
             // 
-            this.Add_Flight.Location = new System.Drawing.Point(36, 77);
+            this.Add_Flight.Location = new System.Drawing.Point(154, 90);
             this.Add_Flight.Name = "Add_Flight";
-            this.Add_Flight.Size = new System.Drawing.Size(75, 26);
+            this.Add_Flight.Size = new System.Drawing.Size(75, 33);
             this.Add_Flight.TabIndex = 0;
             this.Add_Flight.Text = "Uçuş Ekle";
             this.Add_Flight.UseVisualStyleBackColor = true;
@@ -48,7 +48,7 @@ namespace ReservationForm.Admin
             // 
             // Show_Rz
             // 
-            this.Show_Rz.Location = new System.Drawing.Point(36, 110);
+            this.Show_Rz.Location = new System.Drawing.Point(108, 142);
             this.Show_Rz.Name = "Show_Rz";
             this.Show_Rz.Size = new System.Drawing.Size(167, 33);
             this.Show_Rz.TabIndex = 1;
@@ -58,9 +58,9 @@ namespace ReservationForm.Admin
             // 
             // update
             // 
-            this.update.Location = new System.Drawing.Point(36, 150);
+            this.update.Location = new System.Drawing.Point(131, 197);
             this.update.Name = "update";
-            this.update.Size = new System.Drawing.Size(121, 37);
+            this.update.Size = new System.Drawing.Size(121, 33);
             this.update.TabIndex = 2;
             this.update.Text = "Bilgileri Güncelle";
             this.update.UseVisualStyleBackColor = true;
@@ -74,6 +74,7 @@ namespace ReservationForm.Admin
             this.back.TabIndex = 3;
             this.back.Text = "Geri";
             this.back.UseVisualStyleBackColor = true;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // AdminPage
             // 
@@ -87,6 +88,7 @@ namespace ReservationForm.Admin
             this.Controls.Add(this.Show_Rz);
             this.Controls.Add(this.Add_Flight);
             this.Name = "AdminPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminPage";
             this.Load += new System.EventHandler(this.AdminPage_Load);
             this.ResumeLayout(false);

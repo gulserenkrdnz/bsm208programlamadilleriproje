@@ -50,5 +50,34 @@ namespace ReservationForm.Users
         {
 
         }
+
+        private void groupBox1_Enter_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Back_Login_Click_1(object sender, EventArgs e)
+        {
+            Login Login = new Login();
+            this.Visible = false;
+            Login.ShowDialog();
+            this.Close();
+        }
+
+        private void SearchTicket_Click_1(object sender, EventArgs e)
+        {
+            FlightList flightList = new FlightList();
+            this.Visible = false;
+            flightList.ShowDialog();
+            this.Close();
+        }
+
+        private void goReservations_Click(object sender, EventArgs e)
+        {
+            Show_Reservation reservations = new Show_Reservation();
+            this.Visible = false;
+            reservations.ShowDialog();
+            this.Close();
+        }
     }
 }

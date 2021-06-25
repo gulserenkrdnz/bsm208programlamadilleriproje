@@ -17,7 +17,10 @@ namespace ReservationForm.Admin
 
         private void Admin_LoginButton_Click(object sender, EventArgs e)
         {
-
+            AdminPage adminPage = new AdminPage();
+            this.Visible = false;
+            adminPage.ShowDialog();
+            this.Close();
         }
 
         private void AdminLogin_Load(object sender, EventArgs e)

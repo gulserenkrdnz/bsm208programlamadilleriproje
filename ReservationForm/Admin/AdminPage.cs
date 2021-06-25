@@ -26,9 +26,9 @@ namespace ReservationForm.Admin
 
         private void Show_Rz_Click(object sender, EventArgs e)
         {
-            Show_Reservation Reservation = new Show_Reservation();
+            Reservations reservation = new Reservations();
             this.Visible = false;
-            Reservation.ShowDialog();
+            reservation.ShowDialog();
             this.Close();
         }
 
@@ -44,6 +44,14 @@ namespace ReservationForm.Admin
         private void AdminPage_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            AdminLogin adminLogin = new AdminLogin();
+            this.Visible = false;
+            adminLogin.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -23,7 +23,9 @@ namespace ReservationForm.Users
         private void button1_Click(object sender, EventArgs e)
         {
             FlightList fly = new FlightList();
-            DialogResult sonuc = ShowDialog();
+            this.Visible = false;
+            fly.ShowDialog();
+            this.Close();
         }
 
         private void label2_Click(object sender, EventArgs e)

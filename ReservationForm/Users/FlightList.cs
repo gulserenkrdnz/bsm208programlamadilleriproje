@@ -44,7 +44,7 @@ namespace ReservationForm.Users
         private void listView2_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
-
+/*
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -108,7 +108,7 @@ namespace ReservationForm.Users
 
             }
         }
-
+*/
         private void label5_Click(object sender, EventArgs e)
         {
 
@@ -129,6 +129,14 @@ namespace ReservationForm.Users
         private void price_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            Search search = new Search();
+            this.Visible = false;
+            search.ShowDialog();
+            this.Close();
         }
     }
 }
