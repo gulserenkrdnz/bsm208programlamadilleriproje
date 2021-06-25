@@ -38,7 +38,9 @@ namespace ReservationForm.Users
             this.DestinationCity = new System.Windows.Forms.ComboBox();
             this.DepartureCity = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.goReservations = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Back_Login
@@ -49,20 +51,22 @@ namespace ReservationForm.Users
             this.Back_Login.TabIndex = 12;
             this.Back_Login.Text = "Geri";
             this.Back_Login.UseVisualStyleBackColor = true;
+            this.Back_Login.Click += new System.EventHandler(this.Back_Login_Click_1);
             // 
             // SearchTicket
             // 
-            this.SearchTicket.Location = new System.Drawing.Point(258, 364);
+            this.SearchTicket.Location = new System.Drawing.Point(172, 263);
             this.SearchTicket.Name = "SearchTicket";
             this.SearchTicket.Size = new System.Drawing.Size(84, 31);
             this.SearchTicket.TabIndex = 14;
             this.SearchTicket.Text = "Bilet Ara";
             this.SearchTicket.UseVisualStyleBackColor = true;
+            this.SearchTicket.Click += new System.EventHandler(this.SearchTicket_Click_1);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(180, 303);
+            this.label3.Location = new System.Drawing.Point(92, 210);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 17);
             this.label3.TabIndex = 13;
@@ -71,7 +75,7 @@ namespace ReservationForm.Users
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(139, 247);
+            this.label2.Location = new System.Drawing.Point(44, 159);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 17);
             this.label2.TabIndex = 11;
@@ -80,7 +84,7 @@ namespace ReservationForm.Users
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(138, 201);
+            this.label1.Location = new System.Drawing.Point(39, 118);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 17);
             this.label1.TabIndex = 10;
@@ -89,7 +93,7 @@ namespace ReservationForm.Users
             // DestinationCity
             // 
             this.DestinationCity.FormattingEnabled = true;
-            this.DestinationCity.Location = new System.Drawing.Point(229, 247);
+            this.DestinationCity.Location = new System.Drawing.Point(141, 156);
             this.DestinationCity.Name = "DestinationCity";
             this.DestinationCity.Size = new System.Drawing.Size(198, 25);
             this.DestinationCity.TabIndex = 9;
@@ -97,27 +101,45 @@ namespace ReservationForm.Users
             // DepartureCity
             // 
             this.DepartureCity.FormattingEnabled = true;
-            this.DepartureCity.Location = new System.Drawing.Point(230, 201);
+            this.DepartureCity.Location = new System.Drawing.Point(141, 110);
             this.DepartureCity.Name = "DepartureCity";
-            this.DepartureCity.Size = new System.Drawing.Size(197, 25);
+            this.DepartureCity.Size = new System.Drawing.Size(198, 25);
             this.DepartureCity.TabIndex = 8;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(229, 297);
+            this.dateTimePicker1.Location = new System.Drawing.Point(141, 204);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(198, 25);
             this.dateTimePicker1.TabIndex = 7;
             // 
-            // label4
+            // groupBox1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(229, 145);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 17);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Uçuş Ara";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.SearchTicket);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.DestinationCity);
+            this.groupBox1.Controls.Add(this.DepartureCity);
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Location = new System.Drawing.Point(102, 69);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(418, 376);
+            this.groupBox1.TabIndex = 15;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Uçuş Bilgileri";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter_1);
+            // 
+            // goReservations
+            // 
+            this.goReservations.Location = new System.Drawing.Point(372, 486);
+            this.goReservations.Name = "goReservations";
+            this.goReservations.Size = new System.Drawing.Size(119, 28);
+            this.goReservations.TabIndex = 16;
+            this.goReservations.Text = "Rezervasyonlarım";
+            this.goReservations.UseVisualStyleBackColor = true;
+            this.goReservations.Click += new System.EventHandler(this.goReservations_Click);
             // 
             // Search
             // 
@@ -125,20 +147,16 @@ namespace ReservationForm.Users
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(621, 542);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.goReservations);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Back_Login);
-            this.Controls.Add(this.SearchTicket);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.DestinationCity);
-            this.Controls.Add(this.DepartureCity);
-            this.Controls.Add(this.dateTimePicker1);
             this.Name = "Search";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Search";
             this.Load += new System.EventHandler(this.Search_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -151,6 +169,7 @@ namespace ReservationForm.Users
         private System.Windows.Forms.ComboBox DestinationCity;
         private System.Windows.Forms.ComboBox DepartureCity;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button goReservations;
     }
 }

@@ -46,12 +46,10 @@ namespace ReservationForm.Users
             this.departurePoint = new System.Windows.Forms.Label();
             this.DestinationCity = new System.Windows.Forms.ComboBox();
             this.DepartureCity = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.price = new System.Windows.Forms.Label();
-            this.Ageny = new System.Windows.Forms.ComboBox();
-            this.Agency = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.rezerveEtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,7 +66,7 @@ namespace ReservationForm.Users
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(29, 43);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(371, 249);
+            this.listView1.Size = new System.Drawing.Size(364, 249);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -109,16 +107,17 @@ namespace ReservationForm.Users
             // 
             // back
             // 
-            this.back.Location = new System.Drawing.Point(788, 808);
+            this.back.Location = new System.Drawing.Point(435, 564);
             this.back.Name = "back";
             this.back.Size = new System.Drawing.Size(61, 28);
             this.back.TabIndex = 5;
             this.back.Text = "Geri";
             this.back.UseVisualStyleBackColor = true;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // record
             // 
-            this.record.Location = new System.Drawing.Point(263, 799);
+            this.record.Location = new System.Drawing.Point(263, 555);
             this.record.Name = "record";
             this.record.Size = new System.Drawing.Size(117, 37);
             this.record.TabIndex = 12;
@@ -128,7 +127,7 @@ namespace ReservationForm.Users
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(417, 43);
+            this.label3.Location = new System.Drawing.Point(453, 145);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 17);
             this.label3.TabIndex = 15;
@@ -136,7 +135,7 @@ namespace ReservationForm.Users
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(463, 43);
+            this.dateTimePicker1.Location = new System.Drawing.Point(502, 139);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(198, 25);
             this.dateTimePicker1.TabIndex = 14;
@@ -144,7 +143,7 @@ namespace ReservationForm.Users
             // destination
             // 
             this.destination.AutoSize = true;
-            this.destination.Location = new System.Drawing.Point(674, 93);
+            this.destination.Location = new System.Drawing.Point(405, 93);
             this.destination.Name = "destination";
             this.destination.Size = new System.Drawing.Size(91, 17);
             this.destination.TabIndex = 19;
@@ -153,7 +152,7 @@ namespace ReservationForm.Users
             // departurePoint
             // 
             this.departurePoint.AutoSize = true;
-            this.departurePoint.Location = new System.Drawing.Point(673, 46);
+            this.departurePoint.Location = new System.Drawing.Point(400, 43);
             this.departurePoint.Name = "departurePoint";
             this.departurePoint.Size = new System.Drawing.Size(96, 17);
             this.departurePoint.TabIndex = 18;
@@ -162,7 +161,7 @@ namespace ReservationForm.Users
             // DestinationCity
             // 
             this.DestinationCity.FormattingEnabled = true;
-            this.DestinationCity.Location = new System.Drawing.Point(764, 93);
+            this.DestinationCity.Location = new System.Drawing.Point(502, 93);
             this.DestinationCity.Name = "DestinationCity";
             this.DestinationCity.Size = new System.Drawing.Size(198, 25);
             this.DestinationCity.TabIndex = 17;
@@ -170,47 +169,20 @@ namespace ReservationForm.Users
             // DepartureCity
             // 
             this.DepartureCity.FormattingEnabled = true;
-            this.DepartureCity.Location = new System.Drawing.Point(765, 43);
+            this.DepartureCity.Location = new System.Drawing.Point(502, 40);
             this.DepartureCity.Name = "DepartureCity";
-            this.DepartureCity.Size = new System.Drawing.Size(197, 25);
+            this.DepartureCity.Size = new System.Drawing.Size(198, 25);
             this.DepartureCity.TabIndex = 16;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(463, 84);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(153, 25);
-            this.comboBox1.TabIndex = 20;
             // 
             // price
             // 
             this.price.AutoSize = true;
-            this.price.Location = new System.Drawing.Point(417, 87);
+            this.price.Location = new System.Drawing.Point(459, 186);
             this.price.Name = "price";
             this.price.Size = new System.Drawing.Size(37, 17);
             this.price.TabIndex = 22;
             this.price.Text = "Fiyat:";
             this.price.Click += new System.EventHandler(this.price_Click);
-            // 
-            // Ageny
-            // 
-            this.Ageny.FormattingEnabled = true;
-            this.Ageny.Location = new System.Drawing.Point(463, 146);
-            this.Ageny.Name = "Ageny";
-            this.Ageny.Size = new System.Drawing.Size(153, 25);
-            this.Ageny.TabIndex = 23;
-            this.Ageny.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
-            // 
-            // Agency
-            // 
-            this.Agency.AutoSize = true;
-            this.Agency.Location = new System.Drawing.Point(414, 146);
-            this.Agency.Name = "Agency";
-            this.Agency.Size = new System.Drawing.Size(50, 17);
-            this.Agency.TabIndex = 24;
-            this.Agency.Text = "Acenta:";
-            this.Agency.Click += new System.EventHandler(this.label5_Click);
             // 
             // contextMenuStrip1
             // 
@@ -218,25 +190,28 @@ namespace ReservationForm.Users
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.rezerveEtToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(138, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(69, 26);
             // 
             // rezerveEtToolStripMenuItem
             // 
             this.rezerveEtToolStripMenuItem.Name = "rezerveEtToolStripMenuItem";
-            this.rezerveEtToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
-            this.rezerveEtToolStripMenuItem.Text = "Rezerve Et";
-            this.rezerveEtToolStripMenuItem.Click += new System.EventHandler(this.rezerveEtToolStripMenuItem_Click);
+            this.rezerveEtToolStripMenuItem.Size = new System.Drawing.Size(68, 22);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(502, 183);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(98, 25);
+            this.textBox1.TabIndex = 23;
             // 
             // FlightList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(982, 850);
-            this.Controls.Add(this.Agency);
-            this.Controls.Add(this.Ageny);
+            this.ClientSize = new System.Drawing.Size(723, 616);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.price);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.destination);
             this.Controls.Add(this.departurePoint);
             this.Controls.Add(this.DestinationCity);
@@ -248,6 +223,7 @@ namespace ReservationForm.Users
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listView1);
             this.Name = "FlightList";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FlightList";
             this.Load += new System.EventHandler(this.FlightList_Load);
             this.contextMenuStrip1.ResumeLayout(false);
@@ -274,11 +250,9 @@ namespace ReservationForm.Users
         private System.Windows.Forms.Label departurePoint;
         private System.Windows.Forms.ComboBox DestinationCity;
         private System.Windows.Forms.ComboBox DepartureCity;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label price;
-        private System.Windows.Forms.ComboBox Ageny;
-        private System.Windows.Forms.Label Agency;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem rezerveEtToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
