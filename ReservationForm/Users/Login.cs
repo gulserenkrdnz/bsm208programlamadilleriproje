@@ -19,7 +19,7 @@ namespace ReservationForm.Users
         {
             InitializeComponent();
         }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
             UserManager userManager = new UserManager(new EfUserDal());
@@ -33,9 +33,12 @@ namespace ReservationForm.Users
             }
             else
             {
-                Search search = new Search();
+                UpdateUser updateUser = new UpdateUser();
+                updateUser.LoggedUser = user;
+
+                UserPage userPage = new UserPage();
                 this.Visible = false;
-                search.ShowDialog();
+                userPage.ShowDialog();
                 this.Close();
             }
         }

@@ -70,3 +70,5 @@ C:\Users\Clementine\Source\Repos\bsm208programlamadilleriproje\ReservationForm\o
 C:\Users\Clementine\Source\Repos\bsm208programlamadilleriproje\ReservationForm\obj\Debug\netcoreapp3.1\ReservationForm.dll
 C:\Users\Clementine\Source\Repos\bsm208programlamadilleriproje\ReservationForm\obj\Debug\netcoreapp3.1\ReservationForm.pdb
 C:\Users\Clementine\Source\Repos\bsm208programlamadilleriproje\ReservationForm\obj\Debug\netcoreapp3.1\ReservationForm.genruntimeconfig.cache
+C:\Users\Clementine\Source\Repos\bsm208programlamadilleriproje\ReservationForm\obj\Debug\netcoreapp3.1\ReservationForm.Users.UpdateUser.resources
+C:\Users\Clementine\Source\Repos\bsm208programlamadilleriproje\ReservationForm\obj\Debug\netcoreapp3.1\ReservationForm.Users.UserPage.resources
