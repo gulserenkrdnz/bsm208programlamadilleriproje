@@ -63,7 +63,7 @@ namespace ReservationForm.Users
         {
             DestinationCityManager cityManager = new DestinationCityManager(new EfDestinationCityDal());
 
-                foreach (var city in cityManager.GetAll())
+            foreach (var city in cityManager.GetAll())
                 {
                     DepartureCity.Items.Add(city.CityName);
                     DestinationCity.Items.Add(city.CityName);
@@ -74,7 +74,7 @@ namespace ReservationForm.Users
         {
             string departureCity = DepartureCity.Text;
 
-            DestinationCityManager cityManager = new DestinationCityManager(new EfDestinationCityDal());
+            DepartureCityManager cityManager = new DepartureCityManager(new EfDepartureCityDal());
 
             FlightList.DepartureCity = cityManager.GetByName(departureCity);
         }

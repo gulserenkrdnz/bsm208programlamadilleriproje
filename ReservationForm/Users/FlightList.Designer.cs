@@ -31,6 +31,7 @@ namespace ReservationForm.Users
         {
             this.components = new System.ComponentModel.Container();
             this.TheList = new System.Windows.Forms.ListView();
+            this.list_firmName = new System.Windows.Forms.ColumnHeader();
             this.list_departureCity = new System.Windows.Forms.ColumnHeader();
             this.list_destinationCity = new System.Windows.Forms.ColumnHeader();
             this.list_date = new System.Windows.Forms.ColumnHeader();
@@ -43,7 +44,10 @@ namespace ReservationForm.Users
             this.record = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.rezerveEtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.list_firmName = new System.Windows.Forms.ColumnHeader();
+            this.col1 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,10 +66,15 @@ namespace ReservationForm.Users
             this.TheList.HideSelection = false;
             this.TheList.Location = new System.Drawing.Point(29, 61);
             this.TheList.Name = "TheList";
-            this.TheList.Size = new System.Drawing.Size(765, 249);
+            this.TheList.Size = new System.Drawing.Size(804, 176);
             this.TheList.TabIndex = 0;
             this.TheList.UseCompatibleStateImageBehavior = false;
             this.TheList.View = System.Windows.Forms.View.Details;
+            // 
+            // list_firmName
+            // 
+            this.list_firmName.Text = "Firma";
+            this.list_firmName.Width = 100;
             // 
             // list_departureCity
             // 
@@ -80,6 +89,7 @@ namespace ReservationForm.Users
             // list_date
             // 
             this.list_date.Text = "Tarih";
+            this.list_date.Width = 100;
             // 
             // list_departureTime
             // 
@@ -112,20 +122,20 @@ namespace ReservationForm.Users
             // 
             // back
             // 
-            this.back.Location = new System.Drawing.Point(527, 576);
+            this.back.Location = new System.Drawing.Point(452, 567);
             this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(61, 28);
+            this.back.Size = new System.Drawing.Size(90, 37);
             this.back.TabIndex = 5;
             this.back.Text = "Geri";
             this.back.UseVisualStyleBackColor = true;
             // 
             // record
             // 
-            this.record.Location = new System.Drawing.Point(594, 567);
+            this.record.Location = new System.Drawing.Point(341, 567);
             this.record.Name = "record";
-            this.record.Size = new System.Drawing.Size(117, 37);
+            this.record.Size = new System.Drawing.Size(90, 37);
             this.record.TabIndex = 12;
-            this.record.Text = "Kaydet";
+            this.record.Text = "Rezerve Et";
             this.record.UseVisualStyleBackColor = true;
             // 
             // contextMenuStrip1
@@ -141,17 +151,55 @@ namespace ReservationForm.Users
             this.rezerveEtToolStripMenuItem.Name = "rezerveEtToolStripMenuItem";
             this.rezerveEtToolStripMenuItem.Size = new System.Drawing.Size(68, 22);
             // 
-            // list_firmName
+            // col1
             // 
-            this.list_firmName.Text = "Firma";
-            this.list_firmName.Width = 100;
+            this.col1.AutoSize = true;
+            this.col1.Location = new System.Drawing.Point(839, 108);
+            this.col1.Name = "col1";
+            this.col1.Size = new System.Drawing.Size(15, 14);
+            this.col1.TabIndex = 13;
+            this.col1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(839, 128);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(87, 21);
+            this.checkBox1.TabIndex = 14;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(839, 182);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(87, 21);
+            this.checkBox2.TabIndex = 15;
+            this.checkBox2.Text = "checkBox2";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(839, 155);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(87, 21);
+            this.checkBox3.TabIndex = 16;
+            this.checkBox3.Text = "checkBox3";
+            this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // FlightList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(892, 616);
+            this.ClientSize = new System.Drawing.Size(942, 616);
+            this.Controls.Add(this.checkBox3);
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.col1);
             this.Controls.Add(this.record);
             this.Controls.Add(this.back);
             this.Controls.Add(this.label1);
@@ -189,5 +237,9 @@ namespace ReservationForm.Users
         private System.Windows.Forms.ColumnHeader list_ecoPrice;
         private System.Windows.Forms.ColumnHeader list_businessPrice;
         private System.Windows.Forms.ColumnHeader list_firmName;
+        private System.Windows.Forms.CheckBox col1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox3;
     }
 }

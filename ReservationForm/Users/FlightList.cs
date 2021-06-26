@@ -1,6 +1,7 @@
 ﻿using Business.Concreate;
 using DataAccess.Concreate.EntityFramework;
 using Entities.Concreate;
+using Entities.Concreate.DTOs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +19,7 @@ namespace ReservationForm.Users
             InitializeComponent();
         }
 
-        String stdDetails = "{0}{1}{2}{3}{4}{5}{6}{7}";
+        //String stdDetails = "{0}{1}{2}{3}{4}{5}{6}{7}";
 
         public static DepartureCity DepartureCity { get; set; }
         public static DestinationCity DestinationCity { get; set; }
@@ -26,12 +27,25 @@ namespace ReservationForm.Users
         private void FlightList_Load(object sender, EventArgs e)
         {
             FlightManager flightManager = new FlightManager(new EfFlightDal());
-            List<Flight> flights = flightManager.GetAllByCityId(DepartureCity.ID, DestinationCity.ID);
+            List<FlightListElement> flights = flightManager.GetFlightDetails();
 
             foreach (var item in flights)
             {
-                DepartureCity DepartureCity = 
-                TheList.Items.Add(String.Format());
+                if (item.DestinationCity == FlightList.DestinationCity.CityName && item.DepartureCity == DepartureCity.CityName)
+                {
+                    string firm = item.FirmName;
+                    string departureCity = item.DepartureCity;
+                    string destinationCity = item.DestinationCity;
+                    DateTime? dateTime = (DateTime)item.DepartureDate;
+                    string departureTime = item.DepartureTime;
+                    string arrivalTime = item.ArrivalTime;
+                    decimal ecoPrice = item.EcoPrice;
+                    decimal businessPrice = item.BusinessPrice;
+
+                    TheList.Items.Add(firm).SubItems.AddRange(
+                        new string[] { departureCity, destinationCity, dateTime.ToString(), 
+                        departureTime, arrivalTime, ecoPrice.ToString(), businessPrice.ToString() });
+                }
             }
         }
 

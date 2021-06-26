@@ -7,7 +7,7 @@ using System.Text;
 
 namespace DataAccess.Concreate.EntityFramework
 {
-    class EfDepartureCityDal : EfEntityRepositoryBase<DepartureCity, FlightReservationContext>, IDepartureCityDal
+    public class EfDepartureCityDal : EfEntityRepositoryBase<DepartureCity, FlightReservationContext>, IDepartureCityDal
     {
     }
 }

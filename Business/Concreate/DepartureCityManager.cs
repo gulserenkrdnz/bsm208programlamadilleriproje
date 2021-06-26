@@ -7,7 +7,7 @@ using DataAccess.Abstract;
 
 namespace Business.Concreate
 {
-    class DepartureCityManager : IDepartureCityService
+    public class DepartureCityManager : IDepartureCityService
     {
         IDepartureCityDal _cityDal;
 
