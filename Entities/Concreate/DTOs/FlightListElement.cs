@@ -7,6 +7,7 @@ namespace Entities.Concreate.DTOs
 {
     public class FlightListElement : IDto
     {
+        public int FlightID { get; set; }
         public String FirmName { get; set; }
         public string DepartureCity { get; set; }
         public string DestinationCity { get; set; }

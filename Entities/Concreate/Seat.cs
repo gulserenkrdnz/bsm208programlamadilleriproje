@@ -10,7 +10,11 @@ namespace Entities.Concreate
         public int ID { get; set; }
         public int UserID { get; set; }
         public int FlightID { get; set; }
+        public int SeatNo { get; set; }
         public bool IsAvailable { get; set; }
+        public string Name { get; set; }
+        public string LastName { get; set; }
+
 
     }
 }

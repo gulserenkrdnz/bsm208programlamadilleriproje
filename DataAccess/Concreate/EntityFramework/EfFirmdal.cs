@@ -7,7 +7,7 @@ using System.Text;
 
 namespace DataAccess.Concreate.EntityFramework
 {
-    public class EfFirmdal : EfEntityRepositoryBase<Firm, FlightReservationContext>, IFirmDal
+    public class EfFirmDal : EfEntityRepositoryBase<Firm, FlightReservationContext>, IFirmDal
     {
     }
 }

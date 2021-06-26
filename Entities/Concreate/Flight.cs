@@ -14,8 +14,8 @@ namespace Entities.Concreate
         public DateTime? DepartureDate { get; set; }
         public string DepartureTime { get; set; }
         public string ArrivalTime { get; set; }
-        public decimal EcoPrice { get; set; }
-        public decimal BusinessPrice { get; set; }
+        public int EcoPrice { get; set; }
+        public int BusinessPrice { get; set; }
 
     }
 }
