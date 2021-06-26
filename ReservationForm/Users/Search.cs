@@ -37,9 +37,9 @@ namespace ReservationForm.Users
 
         private void Back_Login_Click_1(object sender, EventArgs e)
         {
-            Login Login = new Login();
+            UserPage userPage = new UserPage();
             this.Visible = false;
-            Login.ShowDialog();
+            userPage.ShowDialog();
             this.Close();
         }
 

@@ -33,18 +33,27 @@ namespace ReservationForm.Users
                 if (Register_Email.Text.Length > 0)
                 {
                     user.Email = Register_Email.Text.Trim();
-                    MessageBox.Show("Email");
                 }
                 if (NewPass.Text.Length > 0 && NewPass.Text.Trim() == CheckNewPass.Text.Trim())
                 {
                     user.Pass = NewPass.Text.Trim();
-                    MessageBox.Show("Pass");
                 }
 
                 userManager.Update(user);
-                MessageBox.Show("son");
+                MessageBox.Show("Günellendi");
+            }
+            else
+            {
+                MessageBox.Show("Günellenme işlemi tamamlanamadı.");
             }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            UserPage userPage = new UserPage();
+            this.Visible = false;
+            userPage.ShowDialog();
+            this.Close();
+        }
     }
 }

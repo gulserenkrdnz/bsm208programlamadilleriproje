@@ -26,6 +26,7 @@ namespace DataAccess.Concreate.EntityFramework
                              on fligth.FirmID equals firm.ID
                              select new FlightListElement
                              {
+                                 FlightID = fligth.ID,
                                  FirmName = firm.FirmName,
                                  DepartureCity = Depcity.CityName,
                                  DestinationCity = Descity.CityName,

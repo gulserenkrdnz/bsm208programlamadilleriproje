@@ -79,7 +79,6 @@ namespace ReservationForm.Users
             this.label2.Size = new System.Drawing.Size(67, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "Ad Soyad:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -100,7 +99,6 @@ namespace ReservationForm.Users
             this.label4.Size = new System.Drawing.Size(87, 17);
             this.label4.TabIndex = 5;
             this.label4.Text = "Varış Noktası:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -228,7 +226,6 @@ namespace ReservationForm.Users
             this.Name = "Show_Reservation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Show_Reservation";
-            this.Load += new System.EventHandler(this.Show_Reservation_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

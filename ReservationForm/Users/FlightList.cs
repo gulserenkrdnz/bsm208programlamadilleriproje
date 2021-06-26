@@ -23,6 +23,7 @@ namespace ReservationForm.Users
 
         public static DepartureCity DepartureCity { get; set; }
         public static DestinationCity DestinationCity { get; set; }
+        public static string FlightId;
 
         private void FlightList_Load(object sender, EventArgs e)
         {
@@ -33,6 +34,7 @@ namespace ReservationForm.Users
             {
                 if (item.DestinationCity == FlightList.DestinationCity.CityName && item.DepartureCity == DepartureCity.CityName)
                 {
+                    int id = item.FlightID;
                     string firm = item.FirmName;
                     string departureCity = item.DepartureCity;
                     string destinationCity = item.DestinationCity;
@@ -42,90 +44,63 @@ namespace ReservationForm.Users
                     decimal ecoPrice = item.EcoPrice;
                     decimal businessPrice = item.BusinessPrice;
 
-                    TheList.Items.Add(firm).SubItems.AddRange(
-                        new string[] { departureCity, destinationCity, dateTime.ToString(), 
+                    TheList.Items.Add(id.ToString()).SubItems.AddRange(
+                        new string[] { firm, departureCity, destinationCity, dateTime.ToString(),
                         departureTime, arrivalTime, ecoPrice.ToString(), businessPrice.ToString() });
                 }
             }
+            SeatManager seatManager = new SeatManager(new EfSeatDal());
+
+            List<Seat> seats = seatManager.GetSeatsByFlightId(Convert.ToInt32(FlightId));
+
+       /*     if(FlightId != null)
+            {
+                foreach (var item in seats)
+                {
+                    groupBox1.
+                }
+            }*/
         }
 
-        /*
-       private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-       {
+        private void col1_CheckedChanged(object sender, EventArgs e)
+        {
+            FlightId = TheList.Items[0].ToString();
+        }
 
-           switch (Agency.Text)
-           {
-               case " A Acentası": KoltukDoldur(8, false);
-                   break;
-               case "B Acentası": KoltukDoldur(12, true);
-                   break;
-               case "C Acentası": KoltukDoldur(10, false);
-                   break;
-           }
-           void KoltukDoldur(int desk, bool rearfive)
-           {
-               slow:
-               foreach (Control ctrl in this.Controls)
-               {
-                   if(ctrl is Button)
-                   {
-                       Button btn = ctrl as Button;
-                       if(btn.Text=="Kaydet")
-                       {
-                           continue;
-                       }
-                     else
-                       {
-                           this.Controls.Remove(ctrl);
-                           goto slow;
-                       }
-                   }
-               }
-                int seatNo = 1;
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            FlightId = TheList.Items[1].ToString();
+        }
 
-               for (int i = 0; i<desk; i++)
-               {
-               for(int j=0;j<5;i++)
-                   {
-                       if(rearfive==true)
-                       {
-                           if(i  !=desk-1 && j==2)
-                           {
-                               continue;
-                           }
-                       }
-                       else
-                       {
-                           if (j == 2)
-                               continue;
-                       }
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            FlightId = TheList.Items[2].ToString();
+        }
 
-                       Button seat = new Button();
-                       seat.Height = seat.Width = 40;
-                       seat.Top = 30 * (i * 45);
-                       seat.Left = 5 * (j * 45);
-                       seat.Text = seatNo.ToString();
-                       seatNo++;
-                       seat.ContextMenuStrip = contextMenuStrip1;
-                       this.Controls.Add(seat);
-                   }
-           }
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            FlightId = TheList.Items[3].ToString();
+        }
 
-           }
-       }
-*/
-        /*       private void rezerveEtToolStripMenuItem_Click(object sender, EventArgs e)
-               {
-                   if (Agency.SelectedIndex == -1 || departurePoint.SelectedIndex == -1 || destination.SelectedIndex == -1)
-                   {
-                       MessageBox.Show("Lütfen önce gerekli alanları doldurun");
-                           return;
+        private void checkBox7_CheckedChanged(object sender, EventArgs e)
+        {
 
-                   }
-                   Show_Reservation Reservation = new Show_Reservation();
-                   DialogResult sonuc= Reservation.ShowDialog();
-               }
-       */
+            FlightId = TheList.Items[4].ToString();
+        }
+
+        private void checkBox6_CheckedChanged(object sender, EventArgs e)
+        {
+
+            FlightId = TheList.Items[5].ToString();
+        }
+
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        {
+            FlightId = TheList.Items[6].ToString();
+        }
+
+
+        
 
     }
 }
