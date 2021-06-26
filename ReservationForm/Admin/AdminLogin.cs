@@ -1,6 +1,7 @@
 ﻿using Business.Concreate;
 using DataAccess.Concreate.EntityFramework;
 using Entities.Concreate;
+using ReservationForm.Users;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,8 @@ namespace ReservationForm.Admin
             InitializeComponent();
         }
 
+        public static Agency LoggedAdmin;
+
         private void Admin_LoginButton_Click(object sender, EventArgs e)
         {
 
@@ -32,6 +35,8 @@ namespace ReservationForm.Admin
             }
             else
             {
+                LoggedAdmin = agency;
+
                 AdminPage adminPage = new AdminPage();
                 this.Visible = false;
                 adminPage.ShowDialog();
@@ -40,9 +45,12 @@ namespace ReservationForm.Admin
             
         }
 
-        private void AdminLogin_Load(object sender, EventArgs e)
+        private void BackToLogin_Click(object sender, EventArgs e)
         {
-
+            Login login = new Login();
+            this.Visible = false;
+            login.ShowDialog();
+            this.Close();
         }
     }
 }

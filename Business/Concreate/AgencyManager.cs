@@ -20,5 +20,10 @@ namespace Business.Concreate
         {
             return _agencyDal.Get(a => a.UserName == username && a.Pass == password);
         }
+
+        public void Update(Agency agency)
+        {
+            _agencyDal.Update(agency);
+        }
     }
 }

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Business.Concreate;
+using DataAccess.Concreate.EntityFramework;
+using Entities.Concreate;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,22 +18,36 @@ namespace ReservationForm.Admin
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void update_information_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             AdminPage adminPage = new AdminPage();
             this.Visible = false;
             adminPage.ShowDialog();
             this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AgencyManager agencyManager = new AgencyManager(new EfAgencyDal());
+
+            if (AdminLogin.LoggedAdmin.Pass == Register_Password.Text)
+            {
+                Agency agency = new Agency();
+                agency = AdminLogin.LoggedAdmin;
+
+                if (Register_Username.Text.Length > 0)
+                {
+                    agency.UserName = Register_Username.Text.Trim();
+                    MessageBox.Show("Email");
+                }
+                if (NewPass.Text.Length > 0 && NewPass.Text.Trim() == CheckNewPass.Text.Trim())
+                {
+                    agency.Pass = NewPass.Text.Trim();
+                    MessageBox.Show("Pass");
+                }
+
+                agencyManager.Update(agency);
+            }
         }
     }
 }

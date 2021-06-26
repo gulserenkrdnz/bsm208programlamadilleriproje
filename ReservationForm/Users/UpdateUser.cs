@@ -18,34 +18,33 @@ namespace ReservationForm.Users
         {
             InitializeComponent();
         }
-        public User LoggedUser { get; set; }
 
-        private void UpdateUser_Load(object sender, EventArgs e)
-        {
+        //public User LoggedUser { get; set; }
 
-        }
-        
         private void button1_Click(object sender, EventArgs e)
         {
             UserManager userManager = new UserManager(new EfUserDal());
 
-            string message = this.LoggedUser.FirstName;
-            MessageBox.Show(message);
-
-            if (Register_Password == Register_PassCheck)
+            if (Login.LoggedUser.Pass == Register_Password.Text)
             {
-                if (Register_Email != null)
+                User user = new User();
+                user = Login.LoggedUser;
+
+                if (Register_Email.Text.Length > 0)
                 {
-                    this.LoggedUser.Email = Register_Email.Text.Trim();
-                    userManager.Update(this.LoggedUser);
+                    user.Email = Register_Email.Text.Trim();
+                    MessageBox.Show("Email");
                 }
-                if (NewPass != null && NewPass == CheckNewPass)
+                if (NewPass.Text.Length > 0 && NewPass.Text.Trim() == CheckNewPass.Text.Trim())
                 {
-                    this.LoggedUser.Pass = NewPass.Text.Trim();
-                    userManager.Update(this.LoggedUser);
+                    user.Pass = NewPass.Text.Trim();
+                    MessageBox.Show("Pass");
                 }
-                
+
+                userManager.Update(user);
+                MessageBox.Show("son");
             }
         }
+
     }
 }

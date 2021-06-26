@@ -36,7 +36,7 @@ namespace ReservationForm.Admin
             // 
             // addflight
             // 
-            this.addflight.Location = new System.Drawing.Point(157, 128);
+            this.addflight.Location = new System.Drawing.Point(250, 212);
             this.addflight.Name = "addflight";
             this.addflight.Size = new System.Drawing.Size(105, 31);
             this.addflight.TabIndex = 0;
@@ -45,7 +45,7 @@ namespace ReservationForm.Admin
             // 
             // back
             // 
-            this.back.Location = new System.Drawing.Point(214, 185);
+            this.back.Location = new System.Drawing.Point(307, 269);
             this.back.Name = "back";
             this.back.Size = new System.Drawing.Size(48, 27);
             this.back.TabIndex = 1;
@@ -59,7 +59,7 @@ namespace ReservationForm.Admin
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(274, 226);
+            this.ClientSize = new System.Drawing.Size(367, 308);
             this.Controls.Add(this.back);
             this.Controls.Add(this.addflight);
             this.Name = "Add_Flight";

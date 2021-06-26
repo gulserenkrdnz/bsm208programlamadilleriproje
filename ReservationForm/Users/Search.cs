@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Business.Concreate;
+using DataAccess.Concreate.EntityFramework;
+using Entities.Concreate;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,30 +34,6 @@ namespace ReservationForm.Users
             this.Close();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Search_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void Back_Login_Click_1(object sender, EventArgs e)
         {
@@ -78,6 +57,35 @@ namespace ReservationForm.Users
             this.Visible = false;
             reservations.ShowDialog();
             this.Close();
+        }
+
+        private void Search_Load(object sender, EventArgs e)
+        {
+            DestinationCityManager cityManager = new DestinationCityManager(new EfDestinationCityDal());
+
+                foreach (var city in cityManager.GetAll())
+                {
+                    DepartureCity.Items.Add(city.CityName);
+                    DestinationCity.Items.Add(city.CityName);
+                }
+        }
+
+        private void DepartureCity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string departureCity = DepartureCity.Text;
+
+            DestinationCityManager cityManager = new DestinationCityManager(new EfDestinationCityDal());
+
+            FlightList.DepartureCity = cityManager.GetByName(departureCity);
+        }
+
+        private void DestinationCity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string destinationCity = DestinationCity.Text;
+
+            DestinationCityManager cityManager = new DestinationCityManager(new EfDestinationCityDal());
+
+            FlightList.DestinationCity = cityManager.GetByName(destinationCity);
         }
     }
 }

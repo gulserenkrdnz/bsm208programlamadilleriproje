@@ -38,5 +38,13 @@ namespace ReservationForm.Users
             updateUser.ShowDialog();
             this.Close();
         }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            this.Visible = false;
+            login.ShowDialog();
+            this.Close();
+        }
     }
 }

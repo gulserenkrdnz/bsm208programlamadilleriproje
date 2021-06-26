@@ -73,6 +73,7 @@ namespace ReservationForm.Users
             this.back.TabIndex = 3;
             this.back.Text = "Geri";
             this.back.UseVisualStyleBackColor = true;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // UserPage
             // 

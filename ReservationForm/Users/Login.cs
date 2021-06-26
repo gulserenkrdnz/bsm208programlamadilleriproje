@@ -19,7 +19,11 @@ namespace ReservationForm.Users
         {
             InitializeComponent();
         }
-        
+
+        //Login olan kullanıcıya buradan ulaşacağız
+        public static User LoggedUser;
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             UserManager userManager = new UserManager(new EfUserDal());
@@ -33,8 +37,7 @@ namespace ReservationForm.Users
             }
             else
             {
-                UpdateUser updateUser = new UpdateUser();
-                updateUser.LoggedUser = user;
+                LoggedUser = user;
 
                 UserPage userPage = new UserPage();
                 this.Visible = false;
