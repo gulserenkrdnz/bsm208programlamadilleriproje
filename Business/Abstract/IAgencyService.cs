@@ -8,5 +8,6 @@ namespace Business.Abstract
     public interface IAgencyService
     {
         Agency LoginCheck(string username, string password);
+        void Update(Agency agency);
     }
 }

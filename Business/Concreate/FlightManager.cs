@@ -1,6 +1,7 @@
 ﻿using Business.Abstract;
 using DataAccess.Abstract;
 using Entities.Concreate;
+using Entities.Concreate.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -33,6 +34,11 @@ namespace Business.Concreate
             return _flightDal.GetAll(f => f.BusinessPrice >= min && f.BusinessPrice <= max);
         }
 
+        public List<Flight> GetAllByCityId(int departureCity, int destinationCity)
+        {
+            return _flightDal.GetAll(f => f.DepartureCityID == departureCity && f.DestinationCityID == destinationCity);
+        }
+
         public List<Flight> GetAllByEcoPrice(decimal min, decimal max)
         {
             return _flightDal.GetAll(f => f.EcoPrice >= min && f.EcoPrice <= max);
@@ -46,6 +52,11 @@ namespace Business.Concreate
         public List<Flight> GetAllByFlightId(int id)
         {
             return _flightDal.GetAll(f => f.ID == id);
+        }
+
+        public List<FlightListElement> GetFlightDetails()
+        {
+            return _flightDal.GetFlightDetails();
         }
     }
 }

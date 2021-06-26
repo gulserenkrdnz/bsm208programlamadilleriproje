@@ -20,6 +20,10 @@ namespace ReservationForm.Users
             InitializeComponent();
         }
 
+        //Login olan kullanıcıya buradan ulaşacağız
+        public static User LoggedUser;
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             UserManager userManager = new UserManager(new EfUserDal());
@@ -33,9 +37,11 @@ namespace ReservationForm.Users
             }
             else
             {
-                Search search = new Search();
+                LoggedUser = user;
+
+                UserPage userPage = new UserPage();
                 this.Visible = false;
-                search.ShowDialog();
+                userPage.ShowDialog();
                 this.Close();
             }
         }

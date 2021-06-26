@@ -8,6 +8,6 @@ namespace Entities.Concreate
     public class Firm : IEntity
     {
         public int ID { get; set; }
-        public string Name { get; set; }
+        public string FirmName { get; set; }
     }
 }

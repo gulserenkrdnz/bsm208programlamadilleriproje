@@ -35,11 +35,12 @@ namespace ReservationForm.Admin
             this.isim = new System.Windows.Forms.Label();
             this.Admin_Password = new System.Windows.Forms.TextBox();
             this.Admin_UserName = new System.Windows.Forms.TextBox();
+            this.BackToLogin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Admin_LoginButton
             // 
-            this.Admin_LoginButton.Location = new System.Drawing.Point(115, 113);
+            this.Admin_LoginButton.Location = new System.Drawing.Point(121, 103);
             this.Admin_LoginButton.Name = "Admin_LoginButton";
             this.Admin_LoginButton.Size = new System.Drawing.Size(107, 28);
             this.Admin_LoginButton.TabIndex = 23;
@@ -50,7 +51,7 @@ namespace ReservationForm.Admin
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(72, 81);
+            this.label6.Location = new System.Drawing.Point(78, 71);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(37, 17);
             this.label6.TabIndex = 22;
@@ -59,7 +60,7 @@ namespace ReservationForm.Admin
             // isim
             // 
             this.isim.AutoSize = true;
-            this.isim.Location = new System.Drawing.Point(31, 40);
+            this.isim.Location = new System.Drawing.Point(37, 30);
             this.isim.Name = "isim";
             this.isim.Size = new System.Drawing.Size(78, 17);
             this.isim.TabIndex = 21;
@@ -67,17 +68,27 @@ namespace ReservationForm.Admin
             // 
             // Admin_Password
             // 
-            this.Admin_Password.Location = new System.Drawing.Point(115, 73);
+            this.Admin_Password.Location = new System.Drawing.Point(121, 63);
             this.Admin_Password.Name = "Admin_Password";
             this.Admin_Password.Size = new System.Drawing.Size(154, 25);
             this.Admin_Password.TabIndex = 20;
             // 
             // Admin_UserName
             // 
-            this.Admin_UserName.Location = new System.Drawing.Point(115, 37);
+            this.Admin_UserName.Location = new System.Drawing.Point(121, 27);
             this.Admin_UserName.Name = "Admin_UserName";
             this.Admin_UserName.Size = new System.Drawing.Size(154, 25);
             this.Admin_UserName.TabIndex = 19;
+            // 
+            // BackToLogin
+            // 
+            this.BackToLogin.Location = new System.Drawing.Point(136, 137);
+            this.BackToLogin.Name = "BackToLogin";
+            this.BackToLogin.Size = new System.Drawing.Size(73, 28);
+            this.BackToLogin.TabIndex = 24;
+            this.BackToLogin.Text = "Geri";
+            this.BackToLogin.UseVisualStyleBackColor = true;
+            this.BackToLogin.Click += new System.EventHandler(this.BackToLogin_Click);
             // 
             // AdminLogin
             // 
@@ -85,7 +96,8 @@ namespace ReservationForm.Admin
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(316, 176);
+            this.ClientSize = new System.Drawing.Size(335, 189);
+            this.Controls.Add(this.BackToLogin);
             this.Controls.Add(this.Admin_LoginButton);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.isim);
@@ -94,7 +106,6 @@ namespace ReservationForm.Admin
             this.Name = "AdminLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminLogin";
-            this.Load += new System.EventHandler(this.AdminLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,5 +118,6 @@ namespace ReservationForm.Admin
         private System.Windows.Forms.Label isim;
         private System.Windows.Forms.TextBox Admin_Password;
         private System.Windows.Forms.TextBox Admin_UserName;
+        private System.Windows.Forms.Button BackToLogin;
     }
 }

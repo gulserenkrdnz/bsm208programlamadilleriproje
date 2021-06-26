@@ -16,7 +16,8 @@ namespace DataAccess.Concreate.EntityFramework
         public DbSet<User> Users { get; set; }
         public DbSet<Flight> Flights { get; set; }
         public DbSet<Firm> Firms { get; set; }
-        public DbSet<City> Cities { get; set; }
+        public DbSet<DestinationCity> DestinationCity { get; set; }
+        public DbSet<DepartureCity> DepartureCity { get; set; }
         public DbSet<Agency> Agencies { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<Seat> Seats{ get; set; }

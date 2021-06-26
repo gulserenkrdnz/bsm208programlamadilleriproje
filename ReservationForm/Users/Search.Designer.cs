@@ -37,7 +37,7 @@ namespace ReservationForm.Users
             this.label1 = new System.Windows.Forms.Label();
             this.DestinationCity = new System.Windows.Forms.ComboBox();
             this.DepartureCity = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Dates = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.goReservations = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -92,26 +92,30 @@ namespace ReservationForm.Users
             // 
             // DestinationCity
             // 
+            this.DestinationCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.DestinationCity.FormattingEnabled = true;
             this.DestinationCity.Location = new System.Drawing.Point(141, 156);
             this.DestinationCity.Name = "DestinationCity";
             this.DestinationCity.Size = new System.Drawing.Size(198, 25);
             this.DestinationCity.TabIndex = 9;
+            this.DestinationCity.SelectedIndexChanged += new System.EventHandler(this.DestinationCity_SelectedIndexChanged);
             // 
             // DepartureCity
             // 
+            this.DepartureCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.DepartureCity.FormattingEnabled = true;
             this.DepartureCity.Location = new System.Drawing.Point(141, 110);
             this.DepartureCity.Name = "DepartureCity";
             this.DepartureCity.Size = new System.Drawing.Size(198, 25);
             this.DepartureCity.TabIndex = 8;
+            this.DepartureCity.SelectedIndexChanged += new System.EventHandler(this.DepartureCity_SelectedIndexChanged);
             // 
-            // dateTimePicker1
+            // Dates
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(141, 204);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(198, 25);
-            this.dateTimePicker1.TabIndex = 7;
+            this.Dates.Location = new System.Drawing.Point(141, 204);
+            this.Dates.Name = "Dates";
+            this.Dates.Size = new System.Drawing.Size(198, 25);
+            this.Dates.TabIndex = 7;
             // 
             // groupBox1
             // 
@@ -122,14 +126,13 @@ namespace ReservationForm.Users
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.DestinationCity);
             this.groupBox1.Controls.Add(this.DepartureCity);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.Dates);
             this.groupBox1.Location = new System.Drawing.Point(102, 69);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(418, 376);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Uçuş Bilgileri";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter_1);
             // 
             // goReservations
             // 
@@ -166,10 +169,10 @@ namespace ReservationForm.Users
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox DestinationCity;
-        private System.Windows.Forms.ComboBox DepartureCity;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button goReservations;
+        public System.Windows.Forms.ComboBox DestinationCity;
+        public System.Windows.Forms.ComboBox DepartureCity;
+        public System.Windows.Forms.DateTimePicker Dates;
     }
 }

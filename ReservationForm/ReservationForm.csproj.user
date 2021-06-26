@@ -37,5 +37,11 @@
     <Compile Update="Users\Show_Reservation.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Users\UpdateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Users\UserPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
