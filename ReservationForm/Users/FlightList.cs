@@ -19,13 +19,126 @@ namespace ReservationForm.Users
             InitializeComponent();
         }
 
-        //String stdDetails = "{0}{1}{2}{3}{4}{5}{6}{7}";
 
         public static DepartureCity DepartureCity { get; set; }
         public static DestinationCity DestinationCity { get; set; }
-        public static string FlightId;
+        public static int FlightId;
+        public static Agency agency;
+        public static int SeatNo;
 
         private void FlightList_Load(object sender, EventArgs e)
+        {
+            ListFlights();
+
+           
+
+
+
+        }
+
+       
+
+       
+        private void col1_CheckedChanged(object sender, EventArgs e)
+        {
+            FlightId = Convert.ToInt32(TheList.Items[0].Text);
+            FillSeats1();
+            FillSeats2();
+            FillSeats3();
+            
+        }
+
+       
+        private void FillSeats1()
+        {
+            SeatManager seatManager = new SeatManager(new EfSeatDal());
+            List<Seat> seats = seatManager.GetSeatsByFlightId(FlightId);
+
+            int counter = 1;
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Button seatButton = new Button();
+                    seatButton.Height = seatButton.Width = 40;
+                    seatButton.Top = 40 + (i * 45);
+                    seatButton.Left = 35 + (j * 45);
+                    seatButton.Text = counter.ToString();
+                    seatButton.Name = (counter * 10).ToString();
+                    foreach (var item in seats)
+                    {
+                        if (item.SeatNo == counter)
+                        {
+                            seatButton.BackColor = Color.Red;
+                        }
+                    }
+                    groupBox1.Controls.Add(seatButton);
+                    counter++;
+                }
+            }
+        }
+
+        private void FillSeats2()
+        {
+            SeatManager seatManager = new SeatManager(new EfSeatDal());
+            List<Seat> seats = seatManager.GetSeatsByFlightId(FlightId);
+
+            int counter = 1;
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Button seatButton = new Button();
+                    seatButton.Height = seatButton.Width = 40;
+                    seatButton.Top = 40 + (i * 45);
+                    seatButton.Left = 35 + (j * 45);
+                    seatButton.Text = counter.ToString();
+                    seatButton.Name = (counter * 100).ToString();
+                    foreach (var item in seats)
+                    {
+                        if (item.SeatNo == counter)
+                        {
+                            seatButton.BackColor = Color.Red;
+                        }
+                    }
+                    groupBox2.Controls.Add(seatButton);
+                    counter++;
+                }
+            }
+        }
+
+        private void FillSeats3()
+        {
+            SeatManager seatManager = new SeatManager(new EfSeatDal());
+            List<Seat> seats = seatManager.GetSeatsByFlightId(FlightId);
+
+            int counter = 1;
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Button seatButton = new Button();
+                    seatButton.Height = seatButton.Width = 40;
+                    seatButton.Top = 40 + (i * 45);
+                    seatButton.Left = 35 + (j * 45);
+                    seatButton.Text = counter.ToString();
+                    seatButton.Name = (counter * 1000).ToString();
+                    SeatNo = counter;
+                    foreach (var item in seats)
+                    {
+                        if (item.SeatNo == counter)
+                        {
+                            seatButton.BackColor = Color.Red;
+                        }
+                    }
+                    groupBox3.Controls.Add(seatButton);
+                    
+                    counter++;
+                }
+            }
+        }
+
+        private void ListFlights()
         {
             FlightManager flightManager = new FlightManager(new EfFlightDal());
             List<FlightListElement> flights = flightManager.GetFlightDetails();
@@ -49,58 +162,65 @@ namespace ReservationForm.Users
                         departureTime, arrivalTime, ecoPrice.ToString(), businessPrice.ToString() });
                 }
             }
-            SeatManager seatManager = new SeatManager(new EfSeatDal());
-
-            List<Seat> seats = seatManager.GetSeatsByFlightId(Convert.ToInt32(FlightId));
-
-       /*     if(FlightId != null)
-            {
-                foreach (var item in seats)
-                {
-                    groupBox1.
-                }
-            }*/
         }
 
-        private void col1_CheckedChanged(object sender, EventArgs e)
+
+        private void back_Click(object sender, EventArgs e)
         {
-            FlightId = TheList.Items[0].ToString();
+            Search search = new Search();
+            this.Visible = false;
+            search.ShowDialog();
+            this.Close();
         }
-
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            FlightId = TheList.Items[1].ToString();
+            FlightId = Convert.ToInt32(TheList.Items[1].Text);
+            FillSeats1();
+            FillSeats2();
+            FillSeats3();
         }
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
-            FlightId = TheList.Items[2].ToString();
+            FlightId = Convert.ToInt32(TheList.Items[2].Text);
+            FillSeats1();
+            FillSeats2();
+            FillSeats3();
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            FlightId = TheList.Items[3].ToString();
+            FlightId = Convert.ToInt32(TheList.Items[3].Text);
+            FillSeats1();
+            FillSeats2();
+            FillSeats3();
         }
 
         private void checkBox7_CheckedChanged(object sender, EventArgs e)
         {
 
-            FlightId = TheList.Items[4].ToString();
+            FlightId = Convert.ToInt32(TheList.Items[4].Text);
+            FillSeats1();
+            FillSeats2();
+            FillSeats3();
         }
 
         private void checkBox6_CheckedChanged(object sender, EventArgs e)
         {
 
-            FlightId = TheList.Items[5].ToString();
+            FlightId = Convert.ToInt32(TheList.Items[5].Text);
+            FillSeats1();
+            FillSeats2();
+            FillSeats3();
         }
 
         private void checkBox5_CheckedChanged(object sender, EventArgs e)
         {
-            FlightId = TheList.Items[6].ToString();
+            FlightId = Convert.ToInt32(TheList.Items[6].Text);
+            FillSeats1();
+            FillSeats2();
+            FillSeats3();
         }
-
-
-        
 
     }
 }

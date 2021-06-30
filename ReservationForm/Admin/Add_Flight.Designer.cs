@@ -40,14 +40,14 @@ namespace ReservationForm.Admin
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.Firm = new System.Windows.Forms.TextBox();
-            this.Departure = new System.Windows.Forms.TextBox();
-            this.Destination = new System.Windows.Forms.TextBox();
+            this.entryFirm = new System.Windows.Forms.TextBox();
             this.DepartureT = new System.Windows.Forms.TextBox();
             this.BusinessPrice = new System.Windows.Forms.TextBox();
             this.ArrivalT = new System.Windows.Forms.TextBox();
             this.EcoPrice = new System.Windows.Forms.TextBox();
             this.DapartureD = new System.Windows.Forms.DateTimePicker();
+            this.entryDepCity = new System.Windows.Forms.ComboBox();
+            this.entryDesCity = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // addflight
@@ -142,26 +142,12 @@ namespace ReservationForm.Admin
             this.label8.TabIndex = 9;
             this.label8.Text = "Busines Fiyat";
             // 
-            // Firm
+            // entryFirm
             // 
-            this.Firm.Location = new System.Drawing.Point(109, 33);
-            this.Firm.Name = "Firm";
-            this.Firm.Size = new System.Drawing.Size(177, 25);
-            this.Firm.TabIndex = 10;
-            // 
-            // Departure
-            // 
-            this.Departure.Location = new System.Drawing.Point(109, 73);
-            this.Departure.Name = "Departure";
-            this.Departure.Size = new System.Drawing.Size(177, 25);
-            this.Departure.TabIndex = 11;
-            // 
-            // Destination
-            // 
-            this.Destination.Location = new System.Drawing.Point(109, 113);
-            this.Destination.Name = "Destination";
-            this.Destination.Size = new System.Drawing.Size(177, 25);
-            this.Destination.TabIndex = 12;
+            this.entryFirm.Location = new System.Drawing.Point(109, 33);
+            this.entryFirm.Name = "entryFirm";
+            this.entryFirm.Size = new System.Drawing.Size(177, 25);
+            this.entryFirm.TabIndex = 10;
             // 
             // DepartureT
             // 
@@ -183,7 +169,6 @@ namespace ReservationForm.Admin
             this.ArrivalT.Name = "ArrivalT";
             this.ArrivalT.Size = new System.Drawing.Size(177, 25);
             this.ArrivalT.TabIndex = 15;
-            this.ArrivalT.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // EcoPrice
             // 
@@ -199,6 +184,22 @@ namespace ReservationForm.Admin
             this.DapartureD.Size = new System.Drawing.Size(177, 25);
             this.DapartureD.TabIndex = 18;
             // 
+            // entryDepCity
+            // 
+            this.entryDepCity.FormattingEnabled = true;
+            this.entryDepCity.Location = new System.Drawing.Point(111, 75);
+            this.entryDepCity.Name = "entryDepCity";
+            this.entryDepCity.Size = new System.Drawing.Size(174, 25);
+            this.entryDepCity.TabIndex = 19;
+            // 
+            // entryDesCity
+            // 
+            this.entryDesCity.FormattingEnabled = true;
+            this.entryDesCity.Location = new System.Drawing.Point(115, 116);
+            this.entryDesCity.Name = "entryDesCity";
+            this.entryDesCity.Size = new System.Drawing.Size(169, 25);
+            this.entryDesCity.TabIndex = 20;
+            // 
             // Add_Flight
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -206,14 +207,14 @@ namespace ReservationForm.Admin
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(477, 386);
+            this.Controls.Add(this.entryDesCity);
+            this.Controls.Add(this.entryDepCity);
             this.Controls.Add(this.DapartureD);
             this.Controls.Add(this.EcoPrice);
             this.Controls.Add(this.ArrivalT);
             this.Controls.Add(this.BusinessPrice);
             this.Controls.Add(this.DepartureT);
-            this.Controls.Add(this.Destination);
-            this.Controls.Add(this.Departure);
-            this.Controls.Add(this.Firm);
+            this.Controls.Add(this.entryFirm);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -227,6 +228,7 @@ namespace ReservationForm.Admin
             this.Name = "Add_Flight";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_Flight";
+            this.Load += new System.EventHandler(this.Add_Flight_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,13 +246,13 @@ namespace ReservationForm.Admin
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox Firm;
-        private System.Windows.Forms.TextBox Departure;
-        private System.Windows.Forms.TextBox Destination;
+        private System.Windows.Forms.TextBox entryFirm;
         private System.Windows.Forms.TextBox DepartureT;
         private System.Windows.Forms.TextBox BusinessPrice;
         private System.Windows.Forms.TextBox ArrivalT;
         private System.Windows.Forms.TextBox EcoPrice;
         private System.Windows.Forms.DateTimePicker DapartureD;
+        private System.Windows.Forms.ComboBox entryDepCity;
+        private System.Windows.Forms.ComboBox entryDesCity;
     }
 }

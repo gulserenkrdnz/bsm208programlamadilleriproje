@@ -9,5 +9,7 @@ namespace Business.Abstract
     {
         Agency LoginCheck(string username, string password);
         void Update(Agency agency);
+
+        Agency GetByID(int id);
     }
 }

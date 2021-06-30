@@ -34,43 +34,38 @@ namespace ReservationForm.Admin
             FirmManager firmManager = new FirmManager(new EfFirmDal());
 
             Flight flight = new Flight();
-            Add_Flight add = new Add_Flight();
 
-            MessageBox.Show("0.");
-     /*       if (add.Firm.Text.ToString().Length > 0 && add.Destination.Text.ToString().Length > 0 
-                && add.DepartureT.Text.ToString().Length > 0 && add.Departure.Text.ToString().Length > 0 
-                && add.ArrivalT.Text.ToString().Length > 0 && add.DepartureD.Text.ToString().Length > 0
-                && add.EcoPrice.Text.ToString().Length > 0 && add.BusinessPrice.Text.ToString().Length > 0)
-            {*/
-                int desID = Convert.ToInt32(desManager.GetByName(add.Destination.Text.ToString()));
-                int depID = Convert.ToInt32(depManager.GetByName(add.Departure.Text.ToString()));
-                int firmID = Convert.ToInt32(firmManager.GetByName(add.Firm.Text.ToString()));
+            DestinationCity desCity = desManager.GetByName(entryDesCity.Text.Trim().ToString());
+            DepartureCity depCity = depManager.GetByName(entryDepCity.Text.Trim().ToString());
+            Firm firm = firmManager.GetByName(entryFirm.Text.Trim().ToString());
 
-                int eprice = Convert.ToInt32(add.EcoPrice.Text.ToString());
+            int desID = desCity.ID;
+            int depID = depCity.ID;
+            int firmID = firm.ID;
+            int ePrice = int.Parse(EcoPrice.Text);
+            flight.FirmID = firmID;
+            flight.DestinationCityID = desID;
+            flight.DepartureCityID = depID;
+            flight.DepartureDate = DapartureD.Value;
+            flight.DepartureTime = DepartureT.Text.ToString();
+            flight.ArrivalTime = ArrivalT.Text.ToString();
+            flight.EcoPrice = ePrice;
+            flight.BusinessPrice = Convert.ToInt32(BusinessPrice.Text.ToString());
 
-                MessageBox.Show(eprice.ToString());
-                flight.FirmID = firmID;
-                flight.DestinationCityID = desID;
-                flight.DepartureCityID = depID;
-                flight.DepartureDate = add.DapartureD.Value;
-                flight.DepartureTime = add.DepartureT.Text.ToString();
-                flight.ArrivalTime = add.ArrivalT.Text.ToString();
-                flight.EcoPrice = eprice;
-                flight.BusinessPrice = Convert.ToInt32(add.BusinessPrice.Text.ToString());
+            flightManager.Add(flight);
+            MessageBox.Show("Kayıt başalrılı.");
 
-                flightManager.Add(flight);
-                MessageBox.Show("Kayıt başalrılı.");
-      //     }
-     //       else
-      //      {
-      //          MessageBox.Show("Başarısız.");
-      //      }
-         
-            }
+        }
 
-        private void textBox5_TextChanged(object sender, EventArgs e)
+        private void Add_Flight_Load(object sender, EventArgs e)
         {
+            DestinationCityManager cityManager = new DestinationCityManager(new EfDestinationCityDal());
 
+            foreach (var city in cityManager.GetAll())
+            {
+                entryDepCity.Items.Add(city.CityName);
+                entryDesCity.Items.Add(city.CityName);
+            }
         }
     }
     }
