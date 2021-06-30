@@ -16,6 +16,11 @@ namespace Business.Concreate
             _agencyDal = agencyDal;
         }
 
+        public Agency GetByID(int id)
+        {
+            return _agencyDal.Get(a => a.ID == id);
+        }
+
         public Agency LoginCheck(string username, string password)
         {
             return _agencyDal.Get(a => a.UserName == username && a.Pass == password);

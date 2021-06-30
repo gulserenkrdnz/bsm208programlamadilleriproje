@@ -19,7 +19,7 @@ namespace DataAccess.Concreate.EntityFramework
         public DbSet<DestinationCity> DestinationCity { get; set; }
         public DbSet<DepartureCity> DepartureCity { get; set; }
         public DbSet<Agency> Agencies { get; set; }
-        public DbSet<Reservation> Reservations { get; set; }
+        public DbSet<Reservation> Reservation { get; set; }
         public DbSet<Seat> Seats{ get; set; }
 
     }
